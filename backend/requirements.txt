@@ -1,0 +1,31 @@
+# ClinTwin Backend Dependencies
+# ================================
+
+# Web Framework
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+python-multipart==0.0.6
+
+# HTTP Client (for Hack Club AI API)
+aiohttp==3.9.3
+httpx==0.27.0
+
+# AI/ML (optional - for advanced features)
+# openai==1.12.0       # Uncomment if using OpenAI fallback
+# anthropic==0.18.0    # Uncomment if using Anthropic fallback
+# tensorflow==2.15.0   # Uncomment for CNN model training
+# keras==2.15.0        # Uncomment for CNN model training
+numpy==1.26.3
+pillow==10.2.0
+
+# OCR (optional - install for image text extraction)
+# pytesseract==0.3.10  # Uncomment for Tesseract OCR
+# easyocr==1.7.1       # Uncomment for EasyOCR (better Arabic support)
+
+# Utilities
+pydantic==2.6.0
+python-dotenv==1.0.0
+aiofiles==23.2.1
+
+# CORS
+starlette==0.35.1

@@ -1,0 +1,200 @@
+# ===================================
+# ClinTwin Project .gitignore
+# ===================================
+
+# ===================================
+# Python Backend (FastAPI)
+# ===================================
+
+# Virtual Environment
+backend/venv/
+backend/env/
+backend/.venv/
+*.pyc
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment Variables
+backend/.env
+backend/.env.local
+backend/.env.*.local
+
+# Python Distribution / Packaging
+backend/build/
+backend/develop-eggs/
+backend/dist/
+backend/downloads/
+backend/eggs/
+backend/.eggs/
+backend/lib/
+backend/lib64/
+backend/parts/
+backend/sdist/
+backend/var/
+backend/wheels/
+backend/*.egg-info/
+backend/.installed.cfg
+backend/*.egg
+
+# PyInstaller
+backend/*.manifest
+backend/*.spec
+
+# Unit test / coverage reports
+backend/htmlcov/
+backend/.tox/
+backend/.coverage
+backend/.coverage.*
+backend/.cache
+backend/nosetests.xml
+backend/coverage.xml
+backend/*.cover
+backend/.pytest_cache/
+
+# Jupyter Notebook
+backend/.ipynb_checkpoints
+
+# pyenv
+backend/.python-version
+
+# ML Models (optional - uncomment if models are large)
+# backend/ml_models/*.h5
+# backend/ml_models/*.pkl
+
+# Logs
+backend/*.log
+backend/logs/
+
+# ===================================
+# React Frontend (Vite)
+# ===================================
+
+# Dependencies
+frontend/node_modules/
+frontend/.pnp
+frontend/.pnp.js
+
+# Testing
+frontend/coverage/
+
+# Production Build
+frontend/dist/
+frontend/build/
+
+# Environment Variables
+frontend/.env
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+# Logs
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/pnpm-debug.log*
+frontend/lerna-debug.log*
+
+# Editor directories and files
+frontend/.vscode/*
+!frontend/.vscode/extensions.json
+frontend/.idea
+frontend/.DS_Store
+frontend/*.suo
+frontend/*.ntvs*
+frontend/*.njsproj
+frontend/*.sln
+frontend/*.sw?
+
+# Vite
+frontend/.vite/
+
+# ===================================
+# IDE & Editor Files
+# ===================================
+
+# VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# ===================================
+# Operating System Files
+# ===================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# ===================================
+# Temporary & Cache Files
+# ===================================
+
+*.tmp
+*.temp
+*.bak
+*.backup
+*.cache
+
+# ===================================
+# Sensitive Data & Secrets
+# ===================================
+
+# API Keys & Credentials
+*.pem
+*.key
+*.cert
+secrets.json
+credentials.json
+
+# Database files (if using SQLite locally)
+*.db
+*.sqlite
+*.sqlite3
+
+# ===================================
+# Project-Specific
+# ===================================
+
+# Antigravity brain artifacts (optional - keep if you want to track them)
+# .gemini/
+
+# User uploads (if any)
+backend/uploads/
+frontend/public/uploads/
+
+# Generated documentation
+docs/_build/
+site/
