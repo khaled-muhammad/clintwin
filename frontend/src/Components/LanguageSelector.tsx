@@ -6,8 +6,8 @@ const LanguageSelector = () => {
   const navigate = useNavigate();
   const { setLanguage, t } = useLanguage();
 
-  const handleLanguageSelect = (language: 'en' | 'ar') => {
-    setLanguage(language);
+  const handleEnglishSelect = () => {
+    setLanguage('en');
     // Navigate to next step
     navigate('/permissions/user-type');
   };
@@ -31,18 +31,13 @@ const LanguageSelector = () => {
         </div>
         <div className="flex justify-center items-center flex-col h-[70vh]">
           <h1 className="text-5xl roboto text-center ">{t.languageSelector.title}</h1>
-          <h5 className="mt-3">{t.languageSelector.titleAr}</h5>
+          <p className="mt-3 text-gray-500">Arabic support is coming soon.</p>
         </div>
 
-        <div className="btns flex  flex-col w-100 px-7 gap-4 justify-center mt-6">
+        <div className="btns flex flex-col w-100 px-7 gap-4 justify-center mt-6">
+          <p className="text-gray-500 text-center">{t.languageSelector.english} is available for now.</p>
           <button
-            onClick={() => handleLanguageSelect('ar')}
-            className="bg-[#005A9C] text-white px-6 py-2 rounded-lg shadow-md hover:bg-[#004080] transition-colors duration-200 font-medium"
-          >
-            {t.languageSelector.arabic}
-          </button>
-          <button
-            onClick={() => handleLanguageSelect('en')}
+            onClick={handleEnglishSelect}
             className="mb-7 bg-[#E5E5E5] text-gray-800 px-6 py-2 rounded-lg shadow-md hover:bg-gray-300 transition-colors duration-200 font-medium"
           >
             {t.languageSelector.english}
