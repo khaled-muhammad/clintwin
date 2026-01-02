@@ -1,5 +1,8 @@
-type ImportMetaEnv = { env?: { VITE_API_BASE_URL?: string } };
-const base = ((import.meta as unknown as ImportMetaEnv).env?.VITE_API_BASE_URL)?.replace(/\/$/, "") || "";
+type ImportMetaEnv = { env?: { VITE_API_BASE_URL?: string; DEV?: boolean } };
+
+const env = (import.meta as unknown as ImportMetaEnv).env ?? {};
+const fallbackBase = env.DEV ? "" : "https://clintwin.giize.com";
+const base = (env.VITE_API_BASE_URL?.trim() || fallbackBase).replace(/\/$/, "");
 
 function makeUrl(path: string) {
   return base ? `${base}${path}` : path;
